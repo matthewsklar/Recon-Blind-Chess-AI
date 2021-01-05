@@ -1,0 +1,11 @@
+TODO: Navigate to leaf, backfill code, then in agent use mcts to get leaf run nn and use that to backfill
+      might have to account for next players pov
+
+mcts ->
+    1) navigate to node
+    2) add edge code
+
+agent ->
+    1) evaluate a state
+    2) add new actions to mcts
+    3) update edges

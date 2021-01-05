@@ -1,0 +1,7 @@
+-> Train MCTS for amount of time instead of constant iterations
+-> FIX BUG WHERE SOMETIMES SUM OF PI > 1.0
+-> Update config variables
+-> Consider redesign of nn architecture
+    -- look at alpha zero chess design
+-> hyperparameter tuning
+-> nn training

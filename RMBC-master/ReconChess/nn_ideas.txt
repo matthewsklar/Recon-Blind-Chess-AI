@@ -1,0 +1,29 @@
+use scikit-learn for hyperparameter tuning
+
+nn ->
+    input state (8x8 channels) ->
+        -- channel 1 -> board state
+        -- channel 2 -> turn (1 = white, 0 = black)
+        -- channel 3 -> we can castle (1 = true, 0 = false)
+        -- channel 4 -> prob they can castle [0, 1]
+    modules ->
+        Policy (2 layers)
+            1) conv with 2 filters of kernel size 1x1 with stride 1
+            2) Batch norm
+            3) Rectifier normality
+            4) Fully connected linear layer 
+        Value (3 layers)
+            1) conv with 1 filter of kernel size 1x1 with stride 1
+            2) Batch norm
+            3) Rectifier normality
+            4) Fully connected linear layer to hidden layer of size 256
+            5) Rectifier nonlinearity
+            6) Fully connected linear layer to a scalar
+            7) tanh nonlinearity outputing scalar in [-1, 1]
+
+nn output layer ->
+    all possible actions
+    mapping -> 137 options
+
+TODO: Develop layer
+TODO: Figure out how to train
